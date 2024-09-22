@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sapiente
+      officia fugiat rerum cupiditate deleniti similique tenetur iste dolor rem
+      soluta necessitatibus explicabo officiis distinctio, non ducimus obcaecati
+      dolorem cum!
+    </p>
+    <button>Explora la colección</button>
+  </div>
+  <div *ngIf="mainWatches">
+    <img
+      src={{ mainWatches[0].image }}
+      alt={{ mainWatches[0].description }}
+    />
+    <img
+      src={{ mainWatches[1].image }}
+      alt={{ mainWatches[1].description }}
+    />
+  </div>
+</div>

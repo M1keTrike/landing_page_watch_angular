@@ -1,0 +1,38 @@
+<div>
+  <div>
+    <h2>Colección</h2>
+  </div>
+  <div *ngIf="colectionWatches">
+    <div >
+      <img
+        src={{colectionWatches[0].image}}
+        alt={{colectionWatches[0].description}}
+      />
+      <div>
+        <p>
+            {{colectionWatches[0].description}}
+        </p>
+      </div>
+      <img
+      src={{colectionWatches[1].image}}
+        alt={{colectionWatches[1].description}}
+      />
+    </div>
+    <div>
+      <div>
+        <p>
+            {{colectionWatches[1].description}}
+        </p>
+      </div>
+      <img
+        src={{colectionWatches[2].image}}
+        alt={{colectionWatches[2].description}}
+      />
+      <div>
+        <p>
+            {{colectionWatches[2].description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
