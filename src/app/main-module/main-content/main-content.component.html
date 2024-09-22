@@ -1,21 +1,29 @@
-<div>
-  <div>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sapiente
-      officia fugiat rerum cupiditate deleniti similique tenetur iste dolor rem
-      soluta necessitatibus explicabo officiis distinctio, non ducimus obcaecati
-      dolorem cum!
+<div class="flex mb-48 mt-10">
+  <div class="p-14">
+    <p class="text-left text-6xl">
+      El tiempo es tuyo, lleva el control con estilo
     </p>
-    <button>Explora la colección</button>
+    <button
+      class="shadow-lg text-2xl mt-4 bg-[#0051A1] text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300"
+      (click)="scrollToColection()"
+    >
+      Explora la colección
+    </button>
   </div>
-  <div *ngIf="mainWatches">
+  <div *ngIf="mainWatches" class="flex flex-row">
     <img
-      src={{ mainWatches[0].image }}
-      alt={{ mainWatches[0].description }}
-    />
-    <img
-      src={{ mainWatches[1].image }}
-      alt={{ mainWatches[1].description }}
+      src="{{ mainWatches[0].image }}"
+      alt="{{ mainWatches[0].description }}"
+      class="w-fullh-full"
     />
   </div>
 </div>
+<app-colection-content id="collection"></app-colection-content>
+<footer class="flex justify-between m-2">
+  Copyright © 2003-2022 CASIO AMERICA, INC.
+  <div class="flex">
+    <div *ngFor="let icon of socialMediaIcons">
+      <img [src]="icon" class="inline-block w-8 h-8 ml-8" />
+    </div>
+  </div>
+</footer>

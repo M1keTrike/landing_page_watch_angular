@@ -1,38 +1,13 @@
-<div>
-  <div>
-    <h2>Colección</h2>
-  </div>
-  <div *ngIf="colectionWatches">
-    <div >
+<div class="mt-14">
+  <h2 class="text-6xl font-bold mb-4 text-center">COLECCIÓN</h2>
+  <div *ngIf="colectionWatches" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
+    <div *ngFor="let watch of colectionWatches" class="flex flex-col bg-white shadow-md rounded-lg p-4 hover:scale-110 transition-transform duration-300">
       <img
-        src={{colectionWatches[0].image}}
-        alt={{colectionWatches[0].description}}
+        [src]="watch.image"
+        [alt]="watch.description"
+        class="w-full h-auto rounded-lg mb-2"
       />
-      <div>
-        <p>
-            {{colectionWatches[0].description}}
-        </p>
-      </div>
-      <img
-      src={{colectionWatches[1].image}}
-        alt={{colectionWatches[1].description}}
-      />
-    </div>
-    <div>
-      <div>
-        <p>
-            {{colectionWatches[1].description}}
-        </p>
-      </div>
-      <img
-        src={{colectionWatches[2].image}}
-        alt={{colectionWatches[2].description}}
-      />
-      <div>
-        <p>
-            {{colectionWatches[2].description}}
-        </p>
-      </div>
+      <p class="text-center">{{ watch.description }}</p>
     </div>
   </div>
 </div>

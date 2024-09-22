@@ -9,14 +9,27 @@ import { MainService } from '../services/main.service';
 })
 export class MainContentComponent implements OnInit {
   mainWatches: IWatch[] | undefined;
+  socialMediaIcons: string[] | undefined;
 
   constructor(private mainService: MainService) {}
 
   ngOnInit(): void {
-    this.loadMainWatches;
+    this.loadMainWatches();
+    this.loadSocialMediaIcons();
   }
 
   loadMainWatches() {
     this.mainWatches = this.mainService.getMainWatches();
+  }
+
+  loadSocialMediaIcons() {
+    this.socialMediaIcons = this.mainService.getSocialMediaIcons();
+  }
+
+  scrollToColection(): void {
+    const section = document.getElementById('collection');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

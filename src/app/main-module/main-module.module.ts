@@ -12,6 +12,9 @@ import { ColectionContentComponent } from './colection-content/colection-content
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MainContentComponent
   ]
 })
 export class MainModuleModule { }
