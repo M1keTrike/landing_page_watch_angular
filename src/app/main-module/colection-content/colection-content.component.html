@@ -1,0 +1,13 @@
+<div class="mt-14">
+  <h2 class="text-6xl font-bold mb-4 text-center">COLECCIÓN</h2>
+  <div *ngIf="colectionWatches" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">
+    <div *ngFor="let watch of colectionWatches" class="flex flex-col bg-white shadow-md rounded-lg p-4 hover:scale-110 transition-transform duration-300">
+      <img
+        [src]="watch.image"
+        [alt]="watch.description"
+        class="w-full h-auto rounded-lg mb-2"
+      />
+      <p class="text-center">{{ watch.description }}</p>
+    </div>
+  </div>
+</div>
